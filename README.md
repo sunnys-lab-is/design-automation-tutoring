@@ -1,7 +1,8 @@
 # design-automation-tutoring
 
 'AI 디자인 자동화 1:1 과외' 랜딩 페이지의 배포 저장소입니다.
-실제 공개 주소는 Claude Artifact https://claude.ai/code/artifact/422913a3-3052-468c-9466-1feaaad79fb9 이고, GitHub Pages는 꺼져 있습니다.
+공개 주소는 GitHub Pages **https://sunnys-lab-is.github.io/design-automation-tutoring/** 입니다(2026-09-03부터, main 브랜치 루트, `.nojekyll`).
+같은 내용이 Claude Artifact https://claude.ai/code/artifact/422913a3-3052-468c-9466-1feaaad79fb9 에도 게시되지만 Artifact는 로그인한 사람에게만 열립니다.
 
 ## 소스는 `index.html` 하나입니다
 
@@ -14,7 +15,7 @@
 
 1. `index.html`을 직접 고칩니다. 큰 삽입은 `portfolio/add-studio-section.py`처럼 재현 가능한 스크립트로 남깁니다(STUDIO 06 섹션이 그 예이며 마크업은 `portfolio/studio-section.html`).
 2. 헤드리스 Chrome으로 1440/500 폭을 렌더해 가로 넘침과 고아 줄을 확인합니다.
-3. Artifact를 같은 주소로 재게시합니다(favicon 🎨 유지).
+3. 커밋·푸시하면 GitHub Pages가 1~2분 안에 갱신됩니다. Artifact도 같은 주소로 재게시합니다(favicon 🎨 유지).
 4. 커밋·푸시:
 
 ```
