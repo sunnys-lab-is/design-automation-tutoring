@@ -779,18 +779,20 @@
   .admits b { display: block; font-size: 1rem; font-weight: 700; letter-spacing: -.015em; color: var(--ink); }
   .admits span { display: block; font-size: .88rem; color: var(--muted); line-height: 1.58; margin-top: .3rem; }
 
-  /* ═══ LESSONS (07) ═══ — two-up numbered cards with a ghost numeral
-     (ref: 김보현 capability cards "01 / 02 / 03 / 04") */
+  /* ═══ LESSONS (08) ═══ — two-up cards; the week sits above the title as a
+     small mono label in the same voice as .sec-label (the ghost numeral was
+     too loud and did not read as a week marker). */
   .lessons { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); margin-top: 2rem; }
   .lesson {
     background: var(--raised); border: 1px solid var(--hair); border-radius: var(--r-md);
     padding: 1.4rem 1.5rem 1.5rem; position: relative; overflow: hidden; display: block;
   }
   .lesson-no {
-    position: absolute; right: 1.1rem; bottom: .2rem; font-size: 3.4rem; font-weight: 800;
-    letter-spacing: -.05em; color: var(--sunken); line-height: 1; pointer-events: none; user-select: none;
+    display: inline-flex; align-items: center; gap: .45rem; margin-bottom: .7rem;
+    font-family: var(--font-mono); font-size: .68rem; font-weight: 700; line-height: 1;
+    letter-spacing: var(--track); font-variant-numeric: tabular-nums; color: var(--accent);
   }
-  .lesson > div:not(.lesson-no) { position: relative; padding-right: 4.5rem; }
+  .lesson-no::before { content: ""; width: .42rem; height: .42rem; background: var(--accent); transform: rotate(45deg); border-radius: 1px; }
   .lesson h3 { font-size: 1.08rem; }
   .lesson p { margin: .35rem 0 0; font-size: .92rem; color: var(--muted); line-height: 1.6; }
   .lesson .maps {
@@ -913,7 +915,6 @@
   .foot strong { color: var(--ink); }
   .footmeta {
     display: flex; flex-wrap: wrap; gap: .4rem 1.6rem; align-items: center;
-    margin-bottom: 1.6rem; padding-bottom: 1.1rem; border-bottom: 1px solid var(--hair);
     font-family: var(--font-mono); font-size: .66rem; letter-spacing: var(--track);
     text-transform: uppercase; color: var(--faint);
   }
@@ -2009,11 +2010,6 @@
       <span class="sep"></span>
       <span>2026</span>
     </div>
-    <p>
-      <span class="s">페이지의 화면과 산출물 예시는 이 수업의 순서로 만든 다이어리 앱 <strong>Haruroom</strong>에서 가져왔습니다.</span>
-      <span class="s">두 번째 프로젝트 <strong>STUDIO</strong>는 같은 순서로 만든 포트폴리오 생성 앱이며, 개인 프로젝트로 아직 출시 전입니다.</span>
-      <span class="s">화면부터 마스코트, 스토어 이미지까지 전부 같은 순서로 나왔습니다.</span>
-    </p>
   </div>
 </footer>
 
