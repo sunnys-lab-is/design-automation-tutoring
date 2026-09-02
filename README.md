@@ -1,13 +1,27 @@
 # design-automation-tutoring
 
-`portfolio/design-automation-tutoring.html`의 배포용 사본입니다. **이 저장소의 `index.html`은 생성물이라 직접 편집하면 안 됩니다.**
+'AI 디자인 자동화 1:1 과외' 랜딩 페이지의 배포 저장소입니다.
+실제 공개 주소는 Claude Artifact https://claude.ai/code/artifact/422913a3-3052-468c-9466-1feaaad79fb9 이고, GitHub Pages는 꺼져 있습니다.
 
-갱신 방법:
+## 소스는 `index.html` 하나입니다
+
+2026-08-30 리디자인 이후 **이 저장소의 `index.html`이 편집 대상이자 배포물**입니다.
+예전 파이프라인(`portfolio/design-automation-tutoring.src.html` → `build-page.py` → `.html`)은 08-28 상태에서 멈춰 있어 더 이상 쓰지 않습니다. 그 파일을 빌드해 여기로 복사하면 리디자인이 되돌아가니 주의하세요.
+
+이미지는 Artifact CSP 때문에 외부 참조가 막혀 있어 WebP data URI를 `:root`의 `--img-*` 변수로 한 번씩만 넣습니다. 원본 PNG는 `portfolio/shots/`에 있습니다.
+
+## 갱신 방법
+
+1. `index.html`을 직접 고칩니다. 큰 삽입은 `portfolio/add-studio-section.py`처럼 재현 가능한 스크립트로 남깁니다(STUDIO 06 섹션이 그 예이며 마크업은 `portfolio/studio-section.html`).
+2. 헤드리스 Chrome으로 1440/500 폭을 렌더해 가로 넘침과 고아 줄을 확인합니다.
+3. Artifact를 같은 주소로 재게시합니다(favicon 🎨 유지).
+4. 커밋·푸시:
 
 ```
-python portfolio/build-page.py
-cp portfolio/design-automation-tutoring.html portfolio/deploy/index.html
-cd portfolio/deploy && git add -A && git commit -m "update" && git push
+cd portfolio/deploy && git add -A && git commit -m "..." && git push
 ```
 
-편집 대상은 `portfolio/design-automation-tutoring.src.html`입니다.
+## 섹션 순서
+
+01 표지 · 02 · 03 · 04 · 05 Haruroom · **06 두 번째 프로젝트 STUDIO** · 07 순서(방법) · 08 커리큘럼 · 09 · 10 FAQ · 11 마무리(다크).
+밴드 색은 tinted/plain 교대이며 06이 plain, 07이 tinted입니다.
